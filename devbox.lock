@@ -1,0 +1,93 @@
+{
+  "lockfile_version": "1",
+  "packages": {
+    "crystal@latest": {
+      "last_modified": "2025-05-22T13:30:28Z",
+      "resolved": "github:NixOS/nixpkgs/e314d5c6d3b3a0f40ec5bcbc007b0cbe412f48ae#crystal",
+      "source": "devbox-search",
+      "version": "1.16.3",
+      "systems": {
+        "aarch64-darwin": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/p2plk525id45zmgfi672vg1rrqa5pgid-crystal-1.16.3",
+              "default": true
+            },
+            {
+              "name": "bin",
+              "path": "/nix/store/vqamqs5wsjnl5frs99833av9zps017cn-crystal-1.16.3-bin",
+              "default": true
+            },
+            {
+              "name": "lib",
+              "path": "/nix/store/v5c69d9729kiwn571zrsdsqcxi8xwc3f-crystal-1.16.3-lib"
+            }
+          ],
+          "store_path": "/nix/store/p2plk525id45zmgfi672vg1rrqa5pgid-crystal-1.16.3"
+        },
+        "aarch64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/y0gxh7lqfbv2zmbq51sz7v9wrqy28i2z-crystal-1.16.3",
+              "default": true
+            },
+            {
+              "name": "bin",
+              "path": "/nix/store/xi0janww89rinipy7ysmggkmdirc2gyi-crystal-1.16.3-bin",
+              "default": true
+            },
+            {
+              "name": "lib",
+              "path": "/nix/store/fkgdv1aig5wqazgk4ln6sc51aasr5asw-crystal-1.16.3-lib"
+            }
+          ],
+          "store_path": "/nix/store/y0gxh7lqfbv2zmbq51sz7v9wrqy28i2z-crystal-1.16.3"
+        },
+        "x86_64-darwin": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/8lr7ls0mlj9r7d805xq0q2b87scyb3fr-crystal-1.16.3",
+              "default": true
+            },
+            {
+              "name": "bin",
+              "path": "/nix/store/51q5gwxv66vmdx1gfx0v34ajjny29shi-crystal-1.16.3-bin",
+              "default": true
+            },
+            {
+              "name": "lib",
+              "path": "/nix/store/lcb7knli5wwaqaj5vlhrirvvgjljjljv-crystal-1.16.3-lib"
+            }
+          ],
+          "store_path": "/nix/store/8lr7ls0mlj9r7d805xq0q2b87scyb3fr-crystal-1.16.3"
+        },
+        "x86_64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/1lnxflj2qvxxjrn2hlsynnzzmazrl60i-crystal-1.16.3",
+              "default": true
+            },
+            {
+              "name": "bin",
+              "path": "/nix/store/i0dfks00vxbpsb7qk42c3s3zlimq0y33-crystal-1.16.3-bin",
+              "default": true
+            },
+            {
+              "name": "lib",
+              "path": "/nix/store/n44csig8g1y8r1lna3ly0cazpdkg1hqk-crystal-1.16.3-lib"
+            }
+          ],
+          "store_path": "/nix/store/1lnxflj2qvxxjrn2hlsynnzzmazrl60i-crystal-1.16.3"
+        }
+      }
+    },
+    "github:NixOS/nixpkgs/nixpkgs-unstable": {
+      "last_modified": "2025-06-02T09:36:13Z",
+      "resolved": "github:NixOS/nixpkgs/e4b09e47ace7d87de083786b404bf232eb6c89d8?lastModified=1748856973&narHash=sha256-RlTsJUvvr8ErjPBsiwrGbbHYW8XbB%2Foek0Gi78XdWKg%3D"
+    }
+  }
+}
