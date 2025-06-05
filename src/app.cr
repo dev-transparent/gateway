@@ -1,0 +1,9 @@
+require "./shards"
+
+require "../config/server"
+require "../config/**"
+require "./serializers/base_serializer"
+require "./serializers/**"
+require "./actions/mixins/**"
+require "./actions/**"
+require "./app_server"
