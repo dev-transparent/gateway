@@ -40,6 +40,10 @@ shards:
     git: https://github.com/luckyframework/lucky_template.git
     version: 0.2.0
 
+  oxide:
+    git: https://github.com/garymardell/oxide.git
+    version: 0.1.1+git.commit.e6316fac5afdd91f4b9b8429bf0fd521a328e1a0
+
   pulsar:
     git: https://github.com/luckyframework/pulsar.git
     version: 0.2.3

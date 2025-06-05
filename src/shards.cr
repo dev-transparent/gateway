@@ -4,3 +4,4 @@ LuckyEnv.load?(".env")
 
 # Require your shards here
 require "lucky"
+require "oxide"

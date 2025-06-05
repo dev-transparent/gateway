@@ -6,6 +6,8 @@ targets:
     main: src/gateway.cr
 crystal: ">= 1.14.0"
 dependencies:
+  oxide:
+    github: garymardell/oxide
   lucky:
     github: luckyframework/lucky
     version: ~> 1.3.0
