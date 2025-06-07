@@ -5,6 +5,7 @@ targets:
   gateway:
     main: src/gateway.cr
 crystal: ">= 1.14.0"
+license: AGPL-3.0
 dependencies:
   oxide:
     github: garymardell/oxide
