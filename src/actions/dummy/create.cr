@@ -7,6 +7,8 @@ class Dummy::Create < ApiAction
 
     runtime = Oxide::Execution::Runtime.new(DummySchema::Schema)
 
+    response.headers["X-Dummy"] = "true"
+
     json runtime.execute(
       query: query,
       initial_value: nil
