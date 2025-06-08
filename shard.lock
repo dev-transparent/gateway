@@ -42,7 +42,7 @@ shards:
 
   oxide:
     git: https://github.com/garymardell/oxide.git
-    version: 0.1.1+git.commit.e6316fac5afdd91f4b9b8429bf0fd521a328e1a0
+    version: 0.1.1+git.commit.87ef298c8f9aa887d0f6ead1d92a2aed169012e3
 
   pulsar:
     git: https://github.com/luckyframework/pulsar.git

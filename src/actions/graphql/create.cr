@@ -4,7 +4,7 @@ class Graphql::Create < ApiAction
 
     # Parse the query to generate the AST
     query = Oxide::Query.from_json(params.body)
-    query.document
+    query.document(max_tokens: config.parsing.try &.max_tokens)
 
     # Forward the query to upstream
     client = HTTP::Client.new(config.upstream)
