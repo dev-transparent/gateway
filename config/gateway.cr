@@ -1,3 +1,7 @@
 Gateway::ConfigLoader.configure do |settings|
-  settings.loader = Gateway::DummyConfigLoader.new
+  if LuckyEnv.development?
+    settings.loader = Gateway::DummyConfigLoader.new
+  elsif LuckyEnv.test?
+    settings.loader = Gateway::TestConfigLoader.new
+  end
 end
