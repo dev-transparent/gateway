@@ -1,25 +1,29 @@
 class Graphql::Create < ApiAction
   post "/graphql" do
-    config = Gateway::ConfigLoader.for_request(request)
+    OpenTelemetry.tracer.in_span("graphql") do |span|
+      config = Gateway::ConfigLoader.for_request(request)
 
-    # Parse the query to generate the AST
-    query = Oxide::Query.from_json(params.body)
-    query.document(max_tokens: config.parsing.try &.max_tokens)
+      # Parse the query to generate the AST
+      query = Oxide::Query.from_json(params.body)
+      query.document(max_tokens: config.parsing.try &.max_tokens)
 
-    # Forward the query to upstream
-    client = HTTP::Client.new(config.upstream)
+      # Forward the query to upstream
+      client = HTTP::Client.new(config.upstream)
 
-    request = client.post(
-      path: config.upstream.path,
-      body: params.body
-    )
+      request = OpenTelemetry.tracer.in_span("upstream") do
+        client.post(
+          path: config.upstream.path,
+          body: params.body
+        )
+      end
 
-    # Copy over the headers
-    request.headers.each do |key, value|
-      response.headers[key] = value
+      # Copy over the headers
+      request.headers.each do |key, value|
+        response.headers[key] = value
+      end
+
+      send_text_response(request.body, request.content_type || "application/json", request.status_code)
     end
-
-    send_text_response(request.body, request.content_type || "application/json", request.status_code)
   rescue ex : Oxide::Error
     json Oxide::CombinedError.new([ex])
   end

@@ -5,3 +5,4 @@ LuckyEnv.load?(".env")
 # Require your shards here
 require "lucky"
 require "oxide"
+require "opentelemetry-sdk"

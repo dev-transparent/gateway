@@ -8,6 +8,18 @@ shards:
     git: https://github.com/luckyframework/cry.git
     version: 0.4.3
 
+  csuuid:
+    git: https://github.com/wyhaines/csuuid.cr.git
+    version: 1.0.2
+
+  db:
+    git: https://github.com/crystal-lang/crystal-db.git
+    version: 0.13.1
+
+  debug:
+    git: https://github.com/sija/debug.cr.git
+    version: 2.0.4
+
   dexter:
     git: https://github.com/luckyframework/dexter.git
     version: 0.3.4
@@ -40,17 +52,49 @@ shards:
     git: https://github.com/luckyframework/lucky_template.git
     version: 0.2.0
 
+  nbchannel:
+    git: https://github.com/wyhaines/nbchannel.cr.git
+    version: 0.1.0
+
+  opentelemetry-api:
+    git: https://github.com/wyhaines/opentelemetry-api.cr.git
+    version: 0.5.1
+
+  opentelemetry-sdk:
+    git: https://github.com/wyhaines/opentelemetry-sdk.cr.git
+    version: 0.6.2
+
   oxide:
     git: https://github.com/garymardell/oxide.git
     version: 0.1.1+git.commit.87ef298c8f9aa887d0f6ead1d92a2aed169012e3
+
+  parse_date:
+    git: https://github.com/wyhaines/parsedate.cr.git
+    version: 0.1.2
+
+  protobuf:
+    git: https://github.com/jeromegn/protobuf.cr.git
+    version: 2.3.1
 
   pulsar:
     git: https://github.com/luckyframework/pulsar.git
     version: 0.2.3
 
+  retriable:
+    git: https://github.com/sija/retriable.cr.git
+    version: 0.2.5
+
   shell-table:
     git: https://github.com/luckyframework/shell-table.cr.git
     version: 0.9.3
+
+  splay_tree_map:
+    git: https://github.com/wyhaines/splay_tree_map.cr.git
+    version: 0.3.0
+
+  time-ext:
+    git: https://github.com/wyhaines/time-ext.cr.git
+    version: 1.0.1
 
   wordsmith:
     git: https://github.com/luckyframework/wordsmith.git
