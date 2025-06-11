@@ -3,10 +3,7 @@ module Gateway
     def initialize
       json = <<-CONFIG
         {
-          "upstream": "http://localhost:3000/dummy",
-          "parsing": {
-            "max_tokens": 100
-          }
+          "upstream": "http://localhost:3005/dummy"
         }
       CONFIG
 
