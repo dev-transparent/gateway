@@ -1,7 +1,7 @@
 def create_default_config : Gateway::Config
   json = <<-CONFIG
     {
-      "upstream": "http://localhost:3000/dummy"
+      "upstream": "http://localhost:3005/dummy"
     }
   CONFIG
 
