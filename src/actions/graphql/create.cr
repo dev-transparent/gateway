@@ -1,6 +1,6 @@
 class Graphql::Create < ApiAction
   post "/graphql" do
-    OpenTelemetry.tracer.in_span("graphql") do |span|
+    OpenTelemetry.tracer.in_span("transparent.graphql") do |span|
       config = Gateway::ConfigLoader.for_request(request)
 
       # Parse the query to generate the AST
@@ -10,7 +10,7 @@ class Graphql::Create < ApiAction
       # Forward the query to upstream
       client = HTTP::Client.new(config.upstream)
 
-      request = OpenTelemetry.tracer.in_span("upstream") do
+      request = OpenTelemetry.tracer.in_span("transparent.upstream") do
         client.post(
           path: config.upstream.path,
           body: params.body
