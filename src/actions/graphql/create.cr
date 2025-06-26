@@ -13,6 +13,7 @@ class Graphql::Create < ApiAction
       request = OpenTelemetry.tracer.in_span("transparent.operation") do |span|
         headers = HTTP::Headers.new
 
+        # Using OpenTelemetry we can propagate the trace information in the headers
         OpenTelemetry::Propagation::TraceContext.new(span.context).inject(headers)
 
         client.post(
@@ -24,7 +25,7 @@ class Graphql::Create < ApiAction
           if operation_name = query.operation_name
             span["transparent.operation_name"] = operation_name
           end
-
+          span["transparent.variables"] = query.variables.to_json
           span["transparent.query"] = query.query_string
           span["transparent.method"] = "POST"
           span["transparent.status_code"] = request.status_code
