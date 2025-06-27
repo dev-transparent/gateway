@@ -1,4 +1,6 @@
 class Dummy::Create < ApiAction
+  include DevelopmentOnly
+
   post "/dummy" do
     query = Oxide::Query.from_json(params.body)
 
